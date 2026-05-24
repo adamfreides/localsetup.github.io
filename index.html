@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adam Freides | Freelance PPC & Digital Marketing</title>
+    
+    <meta name="robots" content="noindex, nofollow">
+    
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --accent: #0f172a;
+            --border: #e2e8f0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 40px 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        main {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--accent);
+            margin-top: 0;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .title-tag {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+
+        p {
+            font-size: 16px;
+            color: var(--text-main);
+            margin-bottom: 20px;
+        }
+
+        .services-list {
+            margin: 24px 0;
+            padding-left: 20px;
+            color: var(--text-main);
+        }
+
+        .services-list li {
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        a {
+            color: var(--text-muted);
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        a:hover {
+            color: var(--accent);
+        }
+
+        /* Privacy Policy Modal styling */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(4px);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 550px;
+            max-height: 70vh;
+            overflow-y: auto;
+            border: 1px solid var(--border);
+            position: relative;
+        }
+
+        .close-btn {
+            float: right;
+            font-weight: bold;
+            font-size: 20px;
+            color: var(--text-muted);
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <main>
+        <h1>Adam Freides</h1>
+        <div class="title-tag">Freelance PPC &amp; Digital Marketing</div>
+        
+        <p>Providing independent, enterprise-grade campaign architecture optimization, account infrastructure audits, and private programmatic performance data automation monitoring.</p>
+        
+        <p>Specializing in secure data engineering integration configurations for dedicated client portfolio analysis.</p>
+        
+        <ul class="services-list">
+            <li>Google Ads &amp; Meta Ads Campaign Architecture</li>
+            <li>Custom Google Ads Query Language (GAQL) Reporting Pipelines</li>
+            <li>Budget Management &amp; Spend Anomaly Detection Scripts</li>
+            <li>Private Internal API Infrastructure Integrations</li>
+        </ul>
+    </main>
+
+    <footer>
+        &copy; 2026 Adam Freides. All rights reserved. | <a onclick="toggleModal(true)">Privacy Policy</a>
+    </footer>
+</div>
+
+<div id="privacyModal" class="modal" onclick="toggleModal(false)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <span class="close-btn" onclick="toggleModal(false)">&times;</span>
+        <h2>Privacy Policy</h2>
+        <p><strong>Last Updated: May 2026</strong></p>
+        <p>This website serves strictly as an informational portfolio for the independent freelance consulting operations of Adam Freides. It does not actively solicit, capture, store, or process user tracking cookies, marketing analytics tracking tags, or personal consumer profile data metrics.</p>
+        <p><strong>Data Minimization:</strong> Any voluntary digital communication correspondence directed to domain-aligned inquiries is treated with strict internal data processing safeguards. No data processing metrics are shared, rented, or distributed to any third-party commercial databases.</p>
+        <p><strong>API Operations:</strong> All integrated programmatic interfaces managed via associated platform access architectures function entirely within localized environments using encrypted storage frameworks matching strict consumer data security guidelines.</p>
+    </div>
+</div>
+
+<script>
+    function toggleModal(show) {
+        document.getElementById('privacyModal').style.display = show ? 'flex' : 'none';
+    }
+</script>
+
+</body>
+</html>
