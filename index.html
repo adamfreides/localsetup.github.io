@@ -48,22 +48,29 @@
         .profile-title {
             display: flex;
             align-items: center;
-            gap: 16px;
+            gap: 20px;
             margin-bottom: 12px;
         }
 
-        .avatar-initials {
-            width: 56px;
-            height: 56px;
-            background: var(--accent-gradient);
+        /* Upgraded Headshot Frame */
+        .avatar-frame {
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 700;
-            color: #090d16;
-            font-size: 20px;
-            box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
+            padding: 2px; /* For the gradient border */
+            background: var(--accent-gradient);
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.2);
+        }
+
+        .avatar-frame img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover; /* Ensures image isn't stretched */
+            border: 2px solid #090d16; /* Background color separator */
         }
 
         h1 {
@@ -252,7 +259,9 @@
 <div class="wrapper">
     <header>
         <div class="profile-title">
-            <div class="avatar-initials">AF</div>
+            <div class="avatar-frame">
+                <img src="headshot.png" alt="Adam Freides">
+            </div>
             <div>
                 <h1>Adam Freides</h1>
                 <div class="headline">Freelance Growth Marketer &amp; Paid Search Specialist</div>
@@ -318,4 +327,47 @@
                     <h3 class="role">Senior Account Manager</h3>
                     <p class="company">WordStream</p>
                 </div>
-                <span
+                <span class="duration">Past</span>
+            </div>
+            <ul class="exp-details">
+                <li>Managed premium digital advertising client portfolios, designing high-converting keyword structures and implementing split-testing schemas.</li>
+            </ul>
+        </div>
+
+        <div class="experience-card">
+            <div class="exp-header">
+                <div>
+                    <h3 class="role">Digital Advertising Specialist</h3>
+                    <p class="company">Agency 451</p>
+                </div>
+                <span class="duration">Past</span>
+            </div>
+            <ul class="exp-details">
+                <li>Built, monitored, and scaled core paid search environments while performing granular technical budget mapping configurations.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Adam Freides. All rights reserved. | <a onclick="toggleModal(true)">Infrastructure Privacy Protocol</a>
+    </footer>
+</div>
+
+<div id="privacyModal" class="modal" onclick="toggleModal(false)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <span class="close-btn" onclick="toggleModal(false)">&times;</span>
+        <h2>Infrastructure Privacy Protocol</h2>
+        <p style="font-size: 13px; color: var(--accent);">Effective: May 2026</p>
+        <p style="font-size: 14px; color: var(--text-muted);">This web node exists strictly as an administrative endpoint verifying programmatic API parameters for the independent consulting practices of Adam Freides.</p>
+        <p style="font-size: 14px; color: var(--text-muted);"><strong>Data Isolation:</strong> This environment does not host public conversion pixels, tracking cookies, or consumer profile forms. All active programmatic scripts execute entirely within secure, local-memory data structures via HTTPS transport layers.</p>
+    </div>
+</div>
+
+<script>
+    function toggleModal(show) {
+        document.getElementById('privacyModal').style.display = show ? 'flex' : 'none';
+    }
+</script>
+
+</body>
+</html>
