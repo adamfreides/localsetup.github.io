@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adam Freides | Freelance PPC | Performance Marketer and Google Ads Expert</title>
+    <title>Adam Freides | Freelance Growth Marketer &amp; Paid Search Specialist</title>
     
     <meta name="robots" content="noindex, nofollow">
     
     <style>
         :root {
             --bg: #090d16;
-            --card-bg: rgba(17, 24, 39, 0.7);
+            --card-bg: rgba(17, 24, 39, 0.55);
             --border: rgba(255, 255, 255, 0.08);
             --accent: #38bdf8;
             --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
@@ -22,8 +22,8 @@
             font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
             background-color: var(--bg);
             background-image: 
-                radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.03) 0%, transparent 40%),
-                radial-gradient(circle at 90% 80%, rgba(129, 140, 248, 0.03) 0%, transparent 40%);
+                radial-gradient(circle at 10% 10%, rgba(56, 189, 248, 0.04) 0%, transparent 45%),
+                radial-gradient(circle at 90% 90%, rgba(129, 140, 248, 0.03) 0%, transparent 45%);
             color: var(--text-main);
             line-height: 1.6;
             margin: 0;
@@ -32,123 +32,162 @@
             flex-direction: column;
             min-height: 100vh;
             align-items: center;
-            justify-content: center;
         }
 
         .wrapper {
-            max-width: 750px;
+            max-width: 700px;
             width: 100%;
-            padding: 40px 20px;
+            padding: 60px 20px;
             box-sizing: border-box;
         }
 
         header {
-            text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 48px;
         }
 
-        .logo-mark {
-            width: 48px;
-            height: 48px;
+        .profile-title {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+
+        .avatar-initials {
+            width: 56px;
+            height: 56px;
             background: var(--accent-gradient);
-            border-radius: 12px;
-            margin: 0 auto 16px auto;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 800;
+            font-weight: 700;
             color: #090d16;
-            font-size: 18px;
-            letter-spacing: -0.5px;
-            box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+            font-size: 20px;
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
         }
 
         h1 {
-            font-size: 32px;
+            font-size: 34px;
             font-weight: 800;
-            margin: 0 0 8px 0;
+            margin: 0;
             letter-spacing: -1px;
             background: var(--accent-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .subtitle {
-            font-size: 16px;
-            color: var(--text-muted);
-            font-weight: 400;
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin-bottom: 32px;
-        }
-
-        @media (max-width: 600px) {
-            .grid { grid-template-columns: 1fr; }
-        }
-
-        .card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            padding: 24px;
-            border-radius: 16px;
-            backdrop-filter: blur(12px);
-            transition: transform 0.2s ease, border-color 0.2s ease;
-        }
-
-        .card:hover {
-            border-color: rgba(56, 189, 248, 0.3);
-            transform: translateY(-2px);
-        }
-
-        .card h3 {
-            margin: 0 0 8px 0;
-            font-size: 16px;
-            font-weight: 600;
+        .headline {
+            font-size: 18px;
             color: var(--text-main);
+            font-weight: 500;
+            margin: 4px 0 12px 0;
+        }
+
+        .bio {
+            font-size: 15px;
+            color: var(--text-muted);
+            margin: 0;
+            max-width: 620px;
+        }
+
+        .section-title {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent);
+            margin: 40px 0 16px 0;
             display: flex;
             align-items: center;
             gap: 8px;
         }
 
-        .card h3::before {
-            content: "//";
-            color: var(--accent);
-            font-family: monospace;
-            font-weight: bold;
+        .section-title::after {
+            content: "";
+            flex-grow: 1;
+            height: 1px;
+            background: var(--border);
         }
 
-        .card p {
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .experience-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 24px;
+            border-radius: 14px;
+            backdrop-filter: blur(12px);
+            transition: border-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .experience-card:hover {
+            border-color: rgba(56, 189, 248, 0.25);
+            transform: translateY(-1px);
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 6px;
+        }
+
+        .role {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-main);
             margin: 0;
+        }
+
+        .company {
+            font-size: 14px;
+            color: var(--accent);
+            font-weight: 500;
+            margin: 2px 0 0 0;
+        }
+
+        .duration {
+            font-size: 12px;
+            color: var(--text-muted);
+            font-family: monospace;
+            background: rgba(255, 255, 255, 0.04);
+            padding: 2px 8px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+        }
+
+        .exp-details {
+            margin: 8px 0 0 0;
+            padding-left: 18px;
             font-size: 14px;
             color: var(--text-muted);
         }
 
-        .status-banner {
-            background: rgba(56, 189, 248, 0.05);
-            border: 1px solid rgba(56, 189, 248, 0.15);
-            border-radius: 12px;
-            padding: 16px;
-            text-align: center;
-            font-size: 14px;
-            margin-bottom: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
+        .exp-details li {
+            margin-bottom: 4px;
         }
 
-        .status-indicator {
-            width: 8px;
-            height: 8px;
+        .status-badge {
+            background: rgba(56, 189, 248, 0.05);
+            border: 1px solid rgba(56, 189, 248, 0.15);
+            border-radius: 10px;
+            padding: 12px 16px;
+            font-size: 13.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+
+        .status-dot {
+            width: 7px;
+            height: 7px;
             background-color: #10b981;
             border-radius: 50%;
-            display: inline-block;
             box-shadow: 0 0 8px #10b981;
         }
 
@@ -156,6 +195,7 @@
             text-align: center;
             font-size: 12px;
             color: var(--text-muted);
+            margin-top: 48px;
             border-top: 1px solid var(--border);
             padding-top: 24px;
         }
@@ -165,7 +205,6 @@
             text-decoration: none;
             border-bottom: 1px dotted var(--text-muted);
             cursor: pointer;
-            transition: color 0.2s;
         }
 
         footer a:hover {
@@ -173,12 +212,12 @@
             border-bottom-color: var(--accent);
         }
 
-        /* Privacy Policy Modal Window */
+        /* Modal Structure */
         .modal {
             display: none;
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(5, 8, 15, 0.8);
+            background: rgba(5, 8, 15, 0.85);
             backdrop-filter: blur(8px);
             justify-content: center;
             align-items: center;
@@ -196,14 +235,6 @@
             max-height: 70vh;
             overflow-y: auto;
             position: relative;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
-        }
-
-        .modal-content h2 {
-            margin-top: 0;
-            color: var(--text-main);
-            font-size: 20px;
-            letter-spacing: -0.5px;
         }
 
         .close-btn {
@@ -213,68 +244,78 @@
             font-size: 24px;
             color: var(--text-muted);
             cursor: pointer;
-            transition: color 0.2s;
         }
-
-        .close-btn:hover { color: var(--text-main); }
     </style>
 </head>
 <body>
 
 <div class="wrapper">
     <header>
-        <div class="logo-mark">AF</div>
-        <h1>Adam Freides</h1>
-        <div class="subtitle">Freelance PPC Consultant &bull; Google Ads Expert & Technical Marketing Architecture</div>
+        <div class="profile-title">
+            <div class="avatar-initials">AF</div>
+            <div>
+                <h1>Adam Freides</h1>
+                <div class="headline">Freelance Growth Marketer &amp; Paid Search Specialist</div>
+            </div>
+        </div>
+        <p class="bio">
+            Leveraging a decade of performance marketing experience managing global client budgets, scaling e-commerce architectures, and building custom data automation utilities. Specializing in advanced Google Ads Query Language (GAQL) scripting and budget integrity auditing.
+        </p>
     </header>
 
-    <div class="status-banner">
-        <span class="status-indicator"></span>
-        <span>Currently optimized for secure local environment API pipeline reporting queries.</span>
+    <div class="status-badge">
+        <span class="status-dot"></span>
+        <span>Independent contractor operations optimized for local API environment pipeline queries.</span>
     </div>
 
-    <div class="grid">
-        <div class="card">
-            <h3>Campaign Architecture</h3>
-            <p>Advanced structural optimization models deployed across digital ad networks to isolate and capture conversion intent cleanly.</p>
+    <div class="section-title">Professional Expertise</div>
+    
+    <div class="timeline">
+        <div class="experience-card">
+            <div class="exp-header">
+                <div>
+                    <h3 class="role">Freelance Growth Marketer &amp; PPC Contractor</h3>
+                    <p class="company">Independent Practice</p>
+                </div>
+                <span class="duration">Present</span>
+            </div>
+            <ul class="exp-details">
+                <li>Design custom Google Ads and Meta Ads structures to isolate conversion paths and maximize account scaling efficiencies.</li>
+                <li>Deploy localized data integration scripts to monitor client budget caps, surface account discrepancies, and streamline weekly stats auditing.</li>
+            </ul>
         </div>
-        
-        <div class="card">
-            <h3>Data Automation</h3>
-            <p>Custom data pipelines pulling raw reporting metrics natively via specialized local script configurations, bypassing manual export bottlenecks.</p>
+
+        <div class="experience-card">
+            <div class="exp-header">
+                <div>
+                    <h3 class="role">Growth Marketer / Performance Marketing</h3>
+                    <p class="company">Shopify</p>
+                </div>
+                <span class="duration">Past</span>
+            </div>
+            <ul class="exp-details">
+                <li>Strategized global paid search initiatives, driving merchant acquisition pipelines through deep search query analysis.</li>
+                <li>Collaborated across technical channels to refine tracking attribution frameworks and manage large-scale deployment budgets.</li>
+            </ul>
         </div>
 
-        <div class="card">
-            <h3>Anomaly Audits</h3>
-            <p>Setting programmatic threshold logic to catch ad spend discrepancies, pacing errors, and non-converting high-cost assets early.</p>
+        <div class="experience-card">
+            <div class="exp-header">
+                <div>
+                    <h3 class="role">Performance Marketing Manager</h3>
+                    <p class="company">Netstock</p>
+                </div>
+                <span class="duration">Past</span>
+            </div>
+            <ul class="exp-details">
+                <li>Oversaw full-funnel digital client acquisition strategy, optimizing ad spend return across multi-channel lead generation platforms.</li>
+            </ul>
         </div>
 
-        <div class="card">
-            <h3>Private Operations</h3>
-            <p>Dedicated independent consulting infrastructure specialized in isolated, read-only diagnostic audits for individual client accounts.</p>
-        </div>
-    </div>
-
-    <footer>
-        &copy; 2026 Adam Freides. All rights reserved. | <a onclick="toggleModal(true)">Privacy Architecture Protocol</a>
-    </footer>
-</div>
-
-<div id="privacyModal" class="modal" onclick="toggleModal(false)">
-    <div class="modal-content" onclick="event.stopPropagation()">
-        <span class="close-btn" onclick="toggleModal(false)">&times;</span>
-        <h2>Privacy Architecture Protocol</h2>
-        <p style="font-size: 13px; color: var(--accent);">Effective: May 2026</p>
-        <p style="font-size: 14px; color: var(--text-muted);">This web node exists strictly as an administrative layout verifying active API access parameters for the independent freelance consulting workflows of Adam Freides.</p>
-        <p style="font-size: 14px; color: var(--text-muted);"><strong>Data Isolation:</strong> This site does not feature consumer registration forms, marketing tracking pixels, or commercial cookie tracking. All processing functions occur entirely inside localized, memory-isolated scripts via encrypted transmission layers.</p>
-    </div>
-</div>
-
-<script>
-    function toggleModal(show) {
-        document.getElementById('privacyModal').style.display = show ? 'flex' : 'none';
-    }
-</script>
-
-</body>
-</html>
+        <div class="experience-card">
+            <div class="exp-header">
+                <div>
+                    <h3 class="role">Senior Account Manager</h3>
+                    <p class="company">WordStream</p>
+                </div>
+                <span
